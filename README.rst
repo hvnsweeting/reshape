@@ -57,7 +57,6 @@ Features
 TODO
 ----
 
-- Support py2
 - Use mypy
 
 Credits
