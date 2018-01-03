@@ -54,6 +54,16 @@ Features
   ('f', 'y', None)
   ('r', 'm', None)
 
+  >>> reshape.print_cols(range(28), cols=4, format_each="{:>3}")
+    0   7  14  21
+    1   8  15  22
+    2   9  16  23
+    3  10  17  24
+    4  11  18  25
+    5  12  19  26
+    6  13  20  27
+
+
 TODO
 ----
 

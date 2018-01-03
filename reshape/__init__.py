@@ -4,7 +4,7 @@
 
 __author__ = """Viet Hung Nguyen"""
 __email__ = 'hvn@familug.org'
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 
 
 try:
@@ -36,10 +36,16 @@ def reshape(iterable, cols=3, rows=-1):
 
 
 def column(iterable, cols):
-    '''UNIX column command like'''
+    '''#TODO UNIX column command like
+    '''
     return reshape(iterable, cols, rows=-1)
 
 
+def print_cols(iterable, cols=3, format_each="{}", col_sep=" ", **kwargs):
+    format_all = col_sep.join([format_each] * cols)
+    for line in column(iterable, cols):
+        print(format_all.format(*line))
+
+
 if __name__ == "__main__":
-    for line in column(range(20), 3):
-        print(line)
+    print_cols(range(20), 3)
